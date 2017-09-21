@@ -11,4 +11,9 @@ package javafalltest2017;
  */
 public class JavaFall2017Test {
     
+    
+    public static void main(String[] args) {
+        System.out.println("goodbye");
+    }
+    
 }
