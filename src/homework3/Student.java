@@ -25,6 +25,10 @@ public class Student implements Comparable<Student> {
     public String getName() {return name;}
     public int getAge() {return age;}
     public double getGpa() {return gpa;}
+    
+    public String toString(){
+        return this.name+" "+this.age+" "+this.gpa;
+    }
 
     @Override
     public int compareTo(Student o) {

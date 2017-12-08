@@ -6,6 +6,7 @@
  */
 package homework3;
 
+import java.util.Iterator;
 import java.util.TreeSet;
 
 /**
@@ -29,43 +30,28 @@ public class myCollection {
         
     }
     
-    void arrays(){
-        //ArrayList<Student> [] st = new ArrayList<Student>();
-        int [] q = new int[5];
-        String [] s = new String[10];
-        
-    }
-    
-    void myTreeSet(){
-        TreeSet ts = new TreeSet();
-        //Student st = new Student();
-       // ts.add(st);
-        
-    }
-    
+       
+       
     void run(){
         
         //create a new tree set
         
-        TreeSet ts = new TreeSet();
+        TreeSet<Student> ts = new TreeSet<Student>(new school());
         
-        ts.add(12);
-        ts.add(11);
-        ts.add(13);
-        ts.add(53);
+        ts.add(new Student("todd", 32, 4.0));
+        ts.add(new Student("bob", 19, 2.0));
+        ts.add(new Student("sally", 27, 3.0));
+        ts.add(new Student("mary", 23, 2.7));
         
         
-        System.out.println(ts);
-        sortTree(ts);
         
+        for(Student e:ts)
+        {
+            System.out.println(e);
+        }
+        
+            
     }
 
-    void sortTree(TreeSet ts){
-        
-        ts.add(2);
-        ts.add(14);
-        ts.add(11);
-        System.out.println(ts);
-    }
-
+    
 }
