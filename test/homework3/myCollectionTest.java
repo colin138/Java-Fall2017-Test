@@ -6,6 +6,7 @@
 package homework3;
 
 import homework3.Student;
+import java.util.TreeSet;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -58,7 +59,7 @@ public class myCollectionTest {
     public void testStudent(){
         Student st = new Student("bob", 21, 2.5);
         
-        System.out.println(st.getName() + " " + st.getAge() + " " + st.getGpa());
+        System.out.println(st);
               
     }
     
@@ -74,6 +75,24 @@ public class myCollectionTest {
         }
         assertFalse(isEqual);
     }        
+
+    /**
+     * Test of main method, of class myCollection.
+     */
+    @Test
+    public void testTree() throws Exception {
+        TreeSet<Student> ts = new TreeSet<Student>(new school());
+        
+        ts.add(new Student("todd", 32, 4.0));
+        ts.add(new Student("bob", 19, 2.0));
+        ts.add(new Student("sally", 27, 3.0));
+        ts.add(new Student("mary", 23, 2.7));
+        
+        
+        
+        assertTrue(ts.size() == 4);
+       
+    }
     
     
 }
